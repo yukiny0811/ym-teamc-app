@@ -9,6 +9,8 @@ import TeamCLibrary
 
 extension FarmData {
     
+    //農場を手動で追加していこう！
+    
     static let farms: [FarmData] = [
         .farm1
     ]

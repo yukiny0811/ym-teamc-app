@@ -15,54 +15,10 @@ struct MainView: View {
     var farmListView: some View {
         FarmListView(farms: FarmData.farms) { farm in
             List {
-                Section("日付") {
-                    Text(farm.date.formatted(.dateTime.year().month().day()))
+                Section("セクション") {
+                    Text("文字文字")
                 }
-                Section("農園の様子") {
-                    Image(uiImage: farm.image.jpeg()!)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                }
-                Section("特徴") {
-                    Text(farm.tokuchou)
-                }
-                Section("おすすめポイント") {
-                    Text(farm.osusumePoint)
-                }
-                Section("場所") {
-                    Map {
-                        Annotation(
-                            coordinate: .init(
-                                latitude: farm.mapLocationLat,
-                                longitude: farm.mapLocationLong
-                            )
-                        ) {
-                            ZStack {
-                                Image(systemSymbol: .tree)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 50)
-                            }
-                        } label: {
-                            Text("農園")
-                        }
-                    }
-                    .frame(height: 200)
-                }
-                Section("当日の流れ") {
-                    ForEach(farm.nagare) { n in
-                        Text(n)
-                    }
-                }
-                Section("予約する") {
-                    Button("予約する") {
-                        let topVC = UIApplication.topViewController()!
-                        let yoyakuVC = YoyakuViewController(farm: farm) {
-                            countdownViewController.reload()
-                        }
-                        topVC.present(yoyakuVC,animated: true)
-                    }
-                }
+                //ここに追記していこう！
             }
         }
     }

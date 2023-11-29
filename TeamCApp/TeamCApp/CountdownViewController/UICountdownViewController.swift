@@ -11,8 +11,7 @@ import SwiftUI
 
 class UICountdownViewController: UIViewController {
     
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var imageView: UIImageView!
+    //ここにIBOutletたちをかく
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,21 +20,13 @@ class UICountdownViewController: UIViewController {
     
     func reload() {
         if let yoyakuData = Util.getNearestYoyaku() {
-            let dateDiff = Util.dateDifferenceDay(pastDate: Date(), futureDate: yoyakuData.farm.date)
-            dateLabel.text = "あと\(dateDiff)日"
-            
-            if dateDiff <= 1 {
-                imageView.image = UIImage(named: "muscuit1")!
-            } else if dateDiff <= 10 {
-                imageView.image = UIImage(named: "muscuit2")!
-            } else {
-                imageView.image = UIImage(named: "muscuit3")!
-            }
+            //画面表示の処理はここに書く
         }
     }
     
 }
 
+//ここはいじらない
 struct CountdownView: UIViewRepresentable {
     
     var viewController: UICountdownViewController

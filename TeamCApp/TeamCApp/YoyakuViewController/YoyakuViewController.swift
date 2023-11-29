@@ -10,11 +10,7 @@ import TeamCLibrary
 
 class YoyakuViewController: UIViewController {
     
-    @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var furiganaTextField: UITextField!
-    @IBOutlet var addressTextField: UITextView!
-    @IBOutlet var phoneNumberTextField: UITextField!
-    @IBOutlet var emailTextField: UITextField!
+    //ここにIBOutletたちをかく
     
     let farm: FarmData
     let onYoyakuFinish: () -> ()
@@ -34,19 +30,6 @@ class YoyakuViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func yoyaku() {
-        let yoyakuData = YoyakuData(
-            name: nameTextField.text!,
-            furigana: furiganaTextField.text!,
-            address: addressTextField.text,
-            phoneNumber: phoneNumberTextField.text!,
-            email: emailTextField.text!,
-            farm: farm
-        )
-        Util.newYoyaku(yoyakuData: yoyakuData)
-        Util.showDrop("予約が完了しました！")
-        onYoyakuFinish()
-        self.dismiss(animated: true)
-    }
+    //ここにIBActionを書く
     
 }
