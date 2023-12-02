@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5602EE5C2B1704C100B2BBF1 /* UICountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602EE5B2B1704C100B2BBF1 /* UICountdownViewController.swift */; };
 		5602EE622B1705C800B2BBF1 /* UICountdownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5602EE612B1705C800B2BBF1 /* UICountdownViewController.xib */; };
-		560EBB492B171274007525D5 /* TeamCLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 560EBB482B171274007525D5 /* TeamCLibrary */; };
 		5629934C2B1671F300881E6F /* TeamCAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629934B2B1671F300881E6F /* TeamCAppApp.swift */; };
 		5629934E2B1671F300881E6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629934D2B1671F300881E6F /* ContentView.swift */; };
 		562993502B1671F400881E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5629934F2B1671F400881E6F /* Assets.xcassets */; };
@@ -18,6 +17,7 @@
 		5629935D2B16812700881E6F /* Farms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629935C2B16812700881E6F /* Farms.swift */; };
 		562993612B16F4BB00881E6F /* YoyakuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562993602B16F4BB00881E6F /* YoyakuViewController.swift */; };
 		562993632B16F5CE00881E6F /* YoyakuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562993622B16F5CE00881E6F /* YoyakuViewController.xib */; };
+		569FB2C62B1AAD4C00A092B2 /* TeamCLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 569FB2C52B1AAD4C00A092B2 /* TeamCLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5629935B2B16723400881E6F /* TeamCLibrary in Frameworks */,
-				560EBB492B171274007525D5 /* TeamCLibrary in Frameworks */,
+				569FB2C62B1AAD4C00A092B2 /* TeamCLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 			name = TeamCApp;
 			packageProductDependencies = (
 				5629935A2B16723400881E6F /* TeamCLibrary */,
-				560EBB482B171274007525D5 /* TeamCLibrary */,
+				569FB2C52B1AAD4C00A092B2 /* TeamCLibrary */,
 			);
 			productName = TeamCApp;
 			productReference = 562993482B1671F300881E6F /* TeamCApp.app */;
@@ -167,7 +167,7 @@
 			);
 			mainGroup = 5629933F2B1671F300881E6F;
 			packageReferences = (
-				560EBB472B171274007525D5 /* XCRemoteSwiftPackageReference "ym-teamc-library" */,
+				569FB2C42B1AAD4C00A092B2 /* XCRemoteSwiftPackageReference "ym-teamc-library" */,
 			);
 			productRefGroup = 562993492B1671F300881E6F /* Products */;
 			projectDirPath = "";
@@ -411,24 +411,24 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		560EBB472B171274007525D5 /* XCRemoteSwiftPackageReference "ym-teamc-library" */ = {
+		569FB2C42B1AAD4C00A092B2 /* XCRemoteSwiftPackageReference "ym-teamc-library" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:yukiny0811/ym-teamc-library.git";
+			repositoryURL = "https://github.com/yukiny0811/ym-teamc-library";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		560EBB482B171274007525D5 /* TeamCLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 560EBB472B171274007525D5 /* XCRemoteSwiftPackageReference "ym-teamc-library" */;
-			productName = TeamCLibrary;
-		};
 		5629935A2B16723400881E6F /* TeamCLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = TeamCLibrary;
+		};
+		569FB2C52B1AAD4C00A092B2 /* TeamCLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 569FB2C42B1AAD4C00A092B2 /* XCRemoteSwiftPackageReference "ym-teamc-library" */;
 			productName = TeamCLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
